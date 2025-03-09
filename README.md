@@ -1,8 +1,6 @@
 # LiteLLM Ruby Client
 
-A Ruby client for LiteLLM API with support for completions, embeddings, and image generation.
-
-_Disclaimer: This is not an official LiteLLM product. It is a community-driven project._
+A Ruby client for [LiteLLM](https://docs.litellm.ai/docs) with support for completions, embeddings, and image generation.
 
 ## Installation
 
@@ -24,9 +22,9 @@ Or install it yourself as:
 $ gem install litellm
 ```
 
-## Starting Local Litellm Server
+## Starting Local LiteLLM Server
 
-You can run a litellm server locally by placing this sample config.yaml file:
+You can run a liteLLM server locally by placing this sample config.yaml file:
 
 ```yaml
 model_list:
@@ -51,7 +49,7 @@ model_list:
       api_key: os.environ/OPENAI_API_KEY
 ```
 
-Then you can simple start litellm as a docker container:
+Then you can simply start LiteLLM as a docker container:
 
 ```bash
 $ docker run \
@@ -69,9 +67,9 @@ Configure the client with your API key and other optional settings:
 ```ruby
 LiteLLM.configure do |config|
   config.api_key = 'your-api-key'
-  config.base_url = 'http://localhost:8000' # Default
-  config.timeout = 30 # Default in seconds
-  config.model = 'gpt-3.5-turbo' # Default model
+  config.base_url = 'http://localhost:8000'
+  config.timeout = 30
+  config.model = 'gpt-3.5-turbo'
 end
 ```
 
@@ -84,10 +82,10 @@ Basic completion:
 ```ruby
 client = LiteLLM::Client.new
 
-response =
-  client.completion(
-    messages: [{ role: 'user', content: 'Hello, how are you?' }],
-  )
+response = client.completion(
+  messages: [{ role: 'user', content: 'Hello, how are you?' }],
+)
+
 puts response
 ```
 
@@ -97,7 +95,9 @@ Streaming completion:
 client = LiteLLM::Client.new
 
 client.completion(
-  messages: [{ role: 'user', content: 'Write a story' }],
+  messages: [
+    { role: 'user', content: 'Write a story' }
+  ],
   stream: true,
 ) { |chunk| print chunk }
 ```
@@ -105,13 +105,14 @@ client.completion(
 With additional parameters:
 
 ```ruby
-response =
-  client.completion(
-    messages: [{ role: 'user', content: 'Translate to French: Hello, world!' }],
-    model: 'gpt-4',
-    temperature: 0.7,
-    max_tokens: 100,
-  )
+response = client.completion(
+  messages: [
+    { role: 'user', content: 'Translate to French: Hello, world!' }
+  ],
+  model: 'gpt-4',
+  temperature: 0.7,
+  max_tokens: 100,
+)
 ```
 
 ### Embeddings
@@ -119,11 +120,10 @@ response =
 Generate embeddings for text:
 
 ```ruby
-vector =
-  client.embedding(
-    input: 'The quick brown fox jumps over the lazy dog',
-    model: 'text-embedding-ada-002',
-  )
+vector = client.embedding(
+  input: 'The quick brown fox jumps over the lazy dog',
+  model: 'text-embedding-ada-002',
+)
 ```
 
 ### Image Generation
@@ -131,26 +131,32 @@ vector =
 Generate images from text descriptions:
 
 ```ruby
-image_url =
-  client.image_generation(
-    prompt: 'A beautiful sunset over the ocean',
-    size: '1024x1024',
-    n: 1,
-  )
+image_url = client.image_generation(
+  prompt: 'A beautiful sunset over the ocean',
+  size: '1024x1024',
+  n: 1,
+)
 ```
+
+## Additional LiteLLM Features  
+
+LiteLLM offers additional features through its API, including **Audio, Assistants, Files, Batch**, and [more](https://docs.litellm.ai/docs/).  
+This gem currently implements the features we needed, and I plan to add more as time permits.  
+
+Contributions are always welcome! If you'd like to help expand the gem, please check the [Contributing](#contributing) section.
+
+## Author  
+* [Mohamed Nimir](https://www.linkedin.com/in/mohamednimir/)
+
+## Inspirations
+
+* [ruby-openai](https://github.com/alexrudall/ruby-openai)
+* [langchainrb](https://github.com/patterns-ai-core/langchainrb)
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/Eptikar/litellm-ruby. 
 
 ## License
 
 The gem is available as open source under the terms of the [MIT](https://opensource.org/license/MIT).
-
-## Disclaimer
-
-This project is not affiliated with LiteLLM or Berrie AI Incorporated. It is a community-driven project.
-
-## Contributors
-
-- [@nimir](https://github.com/nimir) LinkedIn: [Mohamed Nimir](https://www.linkedin.com/in/mohamednimir/)
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/eptikar/litellm-ruby. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](CODE_OF_CONDUCT.md).
