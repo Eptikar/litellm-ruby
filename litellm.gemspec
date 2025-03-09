@@ -5,11 +5,11 @@ require_relative "lib/litellm/version"
 Gem::Specification.new do |spec|
   spec.name          = "litellm"
   spec.version       = File.read(File.expand_path("VERSION", __dir__)).strip
-  spec.summary       = "LiteLLM Ruby Client"
-  spec.description   = "A non-official Ruby client for LiteLLM (the LLM gateway) with support for completions, embeddings, and image generation"
-  spec.authors       = ["Eptikar IT Solutions .Inc"]
+  spec.summary       = "LiteLLM Ruby Client."
+  spec.description   = "A Ruby client for LiteLLM (the LLM proxy/gateway)."
+  spec.authors       = ["Mohamed Nimir"]
   spec.homepage      = "https://github.com/eptikar/litellm-ruby"
-  spec.email         = ["opensource@eptikar.com"]
+  spec.email         = ["mohamed.nimir@eptikar.com"]
   spec.license       = "MIT"
   spec.metadata["rubygems_mfa_required"] = "true"
 
