@@ -115,6 +115,37 @@ response = client.completion(
 )
 ```
 
+With function/tool calling the gem has a `ToolDefinition` DSL (inspired by *Langchain.rb*) to easily use ruby methods as tools for your LLM:
+
+```ruby
+# Define your tool class
+class CustomGreetingTool
+  include LiteLLM::Utils::ToolDefinition
+
+  define_function :generate_custom_greeting,
+                 description: "Generate a custom greeting with unique replies" do
+    property :name, type: "string", description: "The name of the user"
+  end
+
+  def generate_custom_greeting(name:)
+    [
+      "Ahoy, #{name}! Ready to conquer the day?",
+      "Greetings, #{name}! The adventure begins now!",
+      "Salutations, #{name}! Time to make today epic!"
+    ].sample
+  end
+end
+
+response = client.completion(
+  messages: [{ role: "user", content: "Give me a greeting, My name is Ahmed!" }],
+  tools: [CustomGreetingTool.new]
+)
+
+puts response
+```
+
+For more examples, check out the [examples folder](examples/).
+
 ### Embeddings
 
 Generate embeddings for text:
