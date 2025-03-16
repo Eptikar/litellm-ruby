@@ -20,9 +20,9 @@ Gem::Specification.new do |spec|
   spec.add_dependency "faraday", ">= 1"
 
   spec.metadata = {
-    "source_code_uri" => "https://github.com/eptikar/ruby-litellm",
-    "changelog_uri" => "https://github.com/eptikar/ruby-litellm/blob/main/CHANGELOG.md",
-    "bug_tracker_uri" => "https://github.com/eptikar/ruby-litellm/issues"
+    "source_code_uri" => "https://github.com/Eptikar/litellm-ruby",
+    "changelog_uri" => "https://github.com/Eptikar/litellm-ruby/blob/main/CHANGELOG.md",
+    "bug_tracker_uri" => "https://github.com/Eptikar/litellm-ruby/issues"
   }
 
   spec.required_ruby_version = Gem::Requirement.new(">= 2.6.0")
