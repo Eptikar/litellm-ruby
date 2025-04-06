@@ -5,7 +5,7 @@ source "https://rubygems.org"
 gemspec
 
 group :development do
-  gem "activesupport", ">= 6.0", "< 9.0"
+  gem "activesupport", "< 8.0"
   gem "bundler", ">= 2.0"
   gem "dotenv"
   gem "rake", ">= 13.0"
