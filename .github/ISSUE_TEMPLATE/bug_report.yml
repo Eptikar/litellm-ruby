@@ -1,0 +1,61 @@
+name: Bug report
+description: Report a reproducible bug or unexpected behavior
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting a bug! Please provide as much detail as possible.
+
+  - type: input
+    id: gem_version
+    attributes:
+      label: Gem Version
+      placeholder: e.g., 0.2.1
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the unexpected behavior or error message
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to Reproduce
+      description: Provide a minimal script or code snippet to reproduce the issue
+      placeholder: |
+        1. Call method `X` with parameter `Y`
+        2. Observe error message `Z`
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: What should the correct behavior be?
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Ruby version, OS, and any other relevant info
+      placeholder: |
+        Ruby version: 3.2.2
+        OS: macOS 14.0
+        Bundler version: 2.4.0
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Before submitting
+      options:
+        - label: I've updated to the latest version of the gem
+          required: true
+        - label: I've read the README and documentation
+          required: true

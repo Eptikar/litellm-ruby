@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-require 'faraday'
-require 'event_stream_parser'
-require 'json'
-require 'logger'
+require "faraday"
+require "event_stream_parser"
+require "json"
+require "logger"
 
-require_relative 'litellm/version'
-require_relative 'litellm/configuration'
-require_relative 'litellm/streaming'
-require_relative 'litellm/client'
-require_relative 'litellm/errors'
-require_relative 'litellm/tool_handler'
-require_relative 'litellm/utils/tool_definition'
+require_relative "litellm/version"
+require_relative "litellm/configuration"
+require_relative "litellm/streaming"
+require_relative "litellm/client"
+require_relative "litellm/errors"
+require_relative "litellm/tool_handler"
+require_relative "litellm/utils/tool_definition"
 
 module LiteLLM
   class Error < StandardError; end

@@ -1,0 +1,14 @@
+require "fileutils"
+
+namespace :vcr do
+  desc "Delete all VCR cassettes"
+  task :reset do
+    cassette_dir = "spec/fixtures/vcr_cassettes"
+    if File.directory?(cassette_dir)
+      FileUtils.rm_rf(Dir.glob("#{cassette_dir}/*"))
+      puts "All VCR cassettes have been deleted from #{cassette_dir}"
+    else
+      puts "No VCR cassettes directory found at #{cassette_dir}"
+    end
+  end
+end

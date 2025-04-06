@@ -28,11 +28,11 @@ module LiteLLM
 
         private
 
-        def build_parameters(&block)
+        def build_parameters(&)
           return nil unless block_given?
 
           builder = ParameterBuilder.new
-          schema = builder.build(&block)
+          schema = builder.build(&)
 
           {
             type: "object",
@@ -101,8 +101,8 @@ module LiteLLM
           @required = []
         end
 
-        def build(&block)
-          instance_eval(&block)
+        def build(&)
+          instance_eval(&)
           { properties: @properties, required: @required }
         end
 

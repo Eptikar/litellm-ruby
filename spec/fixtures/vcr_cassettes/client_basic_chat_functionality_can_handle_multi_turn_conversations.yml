@@ -1,0 +1,115 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8000/chat/completions
+    body:
+      encoding: UTF-8
+      string: '{"messages":[{"role":"user","content":"Who was Ruby''s creator?"},{"role":"assistant","content":"Yukihiro
+        Matsumoto (Matz)"},{"role":"user","content":"What year did he create Ruby?"}],"model":"gpt-3.5-turbo","stream":false}'
+    headers:
+      X-Litellm-Timeout:
+      - '120'
+      User-Agent:
+      - Faraday v2.12.2
+      X-Request-Id:
+      - aa65bce6-75b1-404e-82a7-7bcf135f0e66
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 03 Apr 2025 10:53:41 GMT
+      Server:
+      - uvicorn
+      Content-Length:
+      - '663'
+      Content-Type:
+      - application/json
+      X-Litellm-Call-Id:
+      - 16815398-32e6-44b6-a69b-f4211474388e
+      X-Litellm-Model-Id:
+      - a894f5c6235fa10c0c1755367a3bb2ad54a34654ed3da22bee9da260609709f7
+      X-Litellm-Model-Api-Base:
+      - https://api.openai.com/v1
+      X-Litellm-Version:
+      - 1.61.9
+      X-Litellm-Response-Cost:
+      - '4.45e-05'
+      X-Litellm-Key-Spend:
+      - '0.0'
+      X-Litellm-Response-Duration-Ms:
+      - '706.4599999999999'
+      X-Litellm-Overhead-Duration-Ms:
+      - '2.91'
+      X-Ratelimit-Limit-Requests:
+      - '5000'
+      X-Ratelimit-Remaining-Requests:
+      - '4999'
+      X-Ratelimit-Limit-Tokens:
+      - '2000000'
+      X-Ratelimit-Remaining-Tokens:
+      - '1999976'
+      Llm-Provider-Date:
+      - Thu, 03 Apr 2025 10:53:43 GMT
+      Llm-Provider-Content-Type:
+      - application/json
+      Llm-Provider-Transfer-Encoding:
+      - chunked
+      Llm-Provider-Connection:
+      - keep-alive
+      Llm-Provider-Access-Control-Expose-Headers:
+      - X-Request-ID
+      Llm-Provider-Openai-Organization:
+      - user-s7l904mmsyaeoqfhuynmxjmp
+      Llm-Provider-Openai-Processing-Ms:
+      - '336'
+      Llm-Provider-Openai-Version:
+      - '2020-10-01'
+      Llm-Provider-X-Ratelimit-Limit-Requests:
+      - '5000'
+      Llm-Provider-X-Ratelimit-Limit-Tokens:
+      - '2000000'
+      Llm-Provider-X-Ratelimit-Remaining-Requests:
+      - '4999'
+      Llm-Provider-X-Ratelimit-Remaining-Tokens:
+      - '1999976'
+      Llm-Provider-X-Ratelimit-Reset-Requests:
+      - 12ms
+      Llm-Provider-X-Ratelimit-Reset-Tokens:
+      - 0s
+      Llm-Provider-X-Request-Id:
+      - req_256f3305d8e405d1c17b23b493596317
+      Llm-Provider-Strict-Transport-Security:
+      - max-age=31536000; includeSubDomains; preload
+      Llm-Provider-Cf-Cache-Status:
+      - DYNAMIC
+      Llm-Provider-X-Content-Type-Options:
+      - nosniff
+      Llm-Provider-Server:
+      - cloudflare
+      Llm-Provider-Cf-Ray:
+      - 92a806141a29c951-MCT
+      Llm-Provider-Content-Encoding:
+      - gzip
+      Llm-Provider-Alt-Svc:
+      - h3=":443"; ma=86400
+      X-Litellm-Model-Group:
+      - gpt-3.5-turbo
+      X-Litellm-Attempted-Retries:
+      - '0'
+      X-Litellm-Attempted-Fallbacks:
+      - '0'
+    body:
+      encoding: UTF-8
+      string: '{"id":"chatcmpl-BICUYOSCRAyOjClewygTjBn09dzKQ","created":1743677622,"model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":null,"choices":[{"finish_reason":"stop","index":0,"message":{"content":"Yukihiro
+        Matsumoto created the Ruby programming language in 1995.","role":"assistant","tool_calls":null,"function_call":null,"refusal":null,"annotations":[]}}],"usage":{"completion_tokens":17,"prompt_tokens":38,"total_tokens":55,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0}},"service_tier":"default"}'
+  recorded_at: Thu, 03 Apr 2025 10:53:42 GMT
+recorded_with: VCR 6.3.1

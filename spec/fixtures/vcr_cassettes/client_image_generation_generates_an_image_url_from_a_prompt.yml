@@ -1,0 +1,51 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:8000/images/generations
+    body:
+      encoding: UTF-8
+      string: '{"prompt":"A beautiful sunset over a calm ocean","model":"dall-e-2"}'
+    headers:
+      X-Litellm-Timeout:
+      - '120'
+      User-Agent:
+      - Faraday v2.12.2
+      X-Request-Id:
+      - af27cb1a-53cd-49ef-a4a6-e5f04e77f2f7
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sat, 05 Apr 2025 13:08:01 GMT
+      Server:
+      - uvicorn
+      Content-Length:
+      - '683'
+      Content-Type:
+      - application/json
+      X-Litellm-Call-Id:
+      - d50d25db-91d8-4dfa-aa51-4c0a71f6c12a
+      X-Litellm-Model-Id:
+      - ba9b3735b9c65a4d11422edf195d6e52e24a12cfd02d8332ac4252c062f15275
+      X-Litellm-Model-Api-Base:
+      - https://api.openai.com/v1
+      X-Litellm-Version:
+      - 1.61.9
+      X-Litellm-Response-Cost:
+      - '0.019922944'
+      X-Litellm-Key-Spend:
+      - '0.0'
+    body:
+      encoding: UTF-8
+      string: '{"created":1743858494,"data":[{"b64_json":null,"revised_prompt":null,"url":"https://oaidalleapiprodscus.blob.core.windows.net/private/org-PWt02e03ARXCpcUnOuZHyhp7/user-S7L904MmSyaeOqFHUYNMXJMP/img-5BulyBTWVSOWoCmFp6v9hznQ.png?st=2025-04-05T12%3A08%3A14Z&se=2025-04-05T14%3A08%3A14Z&sp=r&sv=2024-08-04&sr=b&rscd=inline&rsct=image/png&skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-04-05T10%3A03%3A42Z&ske=2025-04-06T10%3A03%3A42Z&sks=b&skv=2024-08-04&sig=6XtlLUPGfrSZp/tOXUhr3%2BRL7HcfW0Bu54kRFLc3ezU%3D"}],"usage":{"completion_tokens":0,"prompt_tokens":0,"total_tokens":0,"completion_tokens_details":null,"prompt_tokens_details":null}}'
+  recorded_at: Sat, 05 Apr 2025 13:08:14 GMT
+recorded_with: VCR 6.3.1
