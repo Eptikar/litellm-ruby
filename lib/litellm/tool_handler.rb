@@ -11,7 +11,7 @@ module LiteLLM
       # Build a mapping of function names to tools
       @available_tools = {}
       available_tools.each do |tool|
-        tool.class.function_definitions.each do |function_name, definition|
+        tool.class.function_definitions.each do |_function_name, definition|
           @available_tools[definition[:name]] = tool
         end
       end
@@ -27,8 +27,6 @@ module LiteLLM
 
       messages
     end
-
-    private
 
     def self.execute_tool_calls(tool_calls)
       tool_calls.map do |tool_call|

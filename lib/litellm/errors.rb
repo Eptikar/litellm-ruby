@@ -79,8 +79,6 @@ module LiteLLM
       raise error
     end
 
-    private
-
     def self.parse_json(body)
       JSON.parse(body)
     rescue JSON::ParserError => e

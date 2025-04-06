@@ -32,8 +32,7 @@ module LiteLLM
   end
 
   class Configuration
-    attr_reader :base_url, :timeout, :model, :embedding_model, :image_model, :embedding_dimensions,
-                :debug, :logger, :enable_message_redaction, :api_key
+    attr_reader :base_url, :timeout, :model, :embedding_model, :image_model, :embedding_dimensions, :debug, :logger, :enable_message_redaction, :api_key
 
     def initialize
       @base_url = DEFAULTS[:base_url]

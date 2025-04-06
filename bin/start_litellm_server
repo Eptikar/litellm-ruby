@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Get the directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+PROJECT_ROOT="$(dirname "$SCRIPT_DIR")"
+
+# Change to the test_server directory and run the start script
+cd "$PROJECT_ROOT/test_server" && ./start_litellm.sh 

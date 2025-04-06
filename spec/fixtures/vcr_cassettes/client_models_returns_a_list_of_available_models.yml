@@ -1,0 +1,37 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:8000/models
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      X-Litellm-Timeout:
+      - '120'
+      User-Agent:
+      - Faraday v2.12.2
+      X-Request-Id:
+      - 0cd1535c-af9a-4bc2-875e-130929ec5a01
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Sun, 06 Apr 2025 06:34:03 GMT
+      Server:
+      - uvicorn
+      Content-Length:
+      - '273'
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"gpt-3.5-turbo","object":"model","created":1677610602,"owned_by":"openai"},{"id":"dall-e-2","object":"model","created":1677610602,"owned_by":"openai"},{"id":"text-embedding-3-small","object":"model","created":1677610602,"owned_by":"openai"}],"object":"list"}'
+  recorded_at: Sun, 06 Apr 2025 06:34:04 GMT
+recorded_with: VCR 6.3.1

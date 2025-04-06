@@ -16,6 +16,14 @@ module LiteLLM
       validate_configuration!
     end
 
+    # Get a list of available models from the LiteLLM server
+    # @return [Array<String>] Array of model names
+    def models
+      response = make_get_request("/models")
+      parsed_response = handle_json_response(response)
+      parsed_response["data"].map { |model| model["id"] }
+    end
+
     # Make a completion request
     # @param messages [Array<Hash>] Array of message objects
     # @param model [String, nil] Optional model override
@@ -131,13 +139,13 @@ module LiteLLM
       end
     end
 
-    def make_request(endpoint, payload, &block)
+    def make_request(endpoint, payload, method: :post, &block)
       request_id = SecureRandom.uuid
       log_request(request_id, endpoint, payload)
 
-      response = connection.post(endpoint) do |req|
+      response = connection.send(method, endpoint) do |req|
         req.headers["X-Request-ID"] = request_id
-        req.body = payload.to_json
+        req.body = payload.to_json if method == :post
         req.options.on_data = Streaming.process_stream(&block) if payload[:stream]
       end
 
@@ -148,7 +156,25 @@ module LiteLLM
       raise
     end
 
-    def handle_tool_calls(response_data, tools, model, stream, &block)
+    # Make a GET request to the specified endpoint
+    # @param endpoint [String] The API endpoint to call
+    # @param payload [Hash] The request payload
+    # @param block [Proc] Optional block for handling streaming responses
+    # @return [Faraday::Response] The API response
+    def make_get_request(endpoint, payload = {}, &)
+      make_request(endpoint, payload, method: :get, &)
+    end
+
+    # Make a POST request to the specified endpoint
+    # @param endpoint [String] The API endpoint to call
+    # @param payload [Hash] The request payload
+    # @param block [Proc] Optional block for handling streaming responses
+    # @return [Faraday::Response] The API response
+    def make_post_request(endpoint, payload = {}, &)
+      make_request(endpoint, payload, method: :post, &)
+    end
+
+    def handle_tool_calls(response_data, tools, model, stream, &)
       LiteLLM.logger.debug "Handling tool calls, stream=#{stream}"
 
       begin
@@ -160,7 +186,7 @@ module LiteLLM
 
         LiteLLM.logger.debug "Tool handler generated messages: #{@messages.inspect}"
 
-        completion(messages: @messages, model: model, tools: tools, stream: stream, &block)
+        completion(messages: @messages, model: model, tools: tools, stream: stream, &)
       rescue StandardError => e
         LiteLLM.logger.error "Error in handle_tool_calls: #{e.message}\n#{e.backtrace.join("\n")}"
         raise
