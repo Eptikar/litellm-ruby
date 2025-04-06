@@ -12,7 +12,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.12.2
       X-Request-Id:
-      - 5ba7f979-6b8e-4700-8fdd-b7554bbcbf0b
+      - 7691928f-4110-44df-b3be-17042df55a89
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -25,7 +25,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 03 Apr 2025 10:53:39 GMT
+      - Sun, 06 Apr 2025 06:32:40 GMT
       Server:
       - uvicorn
       Content-Length:
@@ -33,7 +33,7 @@ http_interactions:
       Content-Type:
       - application/json
       X-Litellm-Call-Id:
-      - 150654f3-53f6-4be5-ac73-a2ef9859dced
+      - 2a9764e3-400c-41f2-9be3-7b01d3ae1b3e
       X-Litellm-Model-Id:
       - a894f5c6235fa10c0c1755367a3bb2ad54a34654ed3da22bee9da260609709f7
       X-Litellm-Model-Api-Base:
@@ -45,9 +45,9 @@ http_interactions:
       X-Litellm-Key-Spend:
       - '0.0'
       X-Litellm-Response-Duration-Ms:
-      - '1627.7649999999999'
+      - '1605.4060000000002'
       X-Litellm-Overhead-Duration-Ms:
-      - '4.494'
+      - '25.89'
       X-Ratelimit-Limit-Requests:
       - '5000'
       X-Ratelimit-Remaining-Requests:
@@ -57,7 +57,7 @@ http_interactions:
       X-Ratelimit-Remaining-Tokens:
       - '1999994'
       Llm-Provider-Date:
-      - Thu, 03 Apr 2025 10:53:42 GMT
+      - Sun, 06 Apr 2025 06:32:42 GMT
       Llm-Provider-Content-Type:
       - application/json
       Llm-Provider-Transfer-Encoding:
@@ -69,7 +69,7 @@ http_interactions:
       Llm-Provider-Openai-Organization:
       - user-s7l904mmsyaeoqfhuynmxjmp
       Llm-Provider-Openai-Processing-Ms:
-      - '252'
+      - '242'
       Llm-Provider-Openai-Version:
       - '2020-10-01'
       Llm-Provider-X-Ratelimit-Limit-Requests:
@@ -85,21 +85,22 @@ http_interactions:
       Llm-Provider-X-Ratelimit-Reset-Tokens:
       - 0s
       Llm-Provider-X-Request-Id:
-      - req_2519c58a8d06c9eb1a9a66f9532ef246
+      - req_e237c8496b923623d03975a657b750e2
       Llm-Provider-Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Llm-Provider-Cf-Cache-Status:
       - DYNAMIC
       Llm-Provider-Set-Cookie:
-      - __cf_bm=l_K2J9A3CUSMkeZplwcGkxkT0ocUJgT3sRtgIpLv6vc-1743677622-1.0.1.1-kGkGOr0K3v6_B2au0N5IlcKiLd1i0d64UyFNXSM_6zAwkri2aU5Txf974Li1pLmyHT0LQSDTi53reXtnilHpFcKHFPpKPAheVNdZWYLIuXg;
-        path=/; expires=Thu, 03-Apr-25 11:23:42 GMT; domain=.api.openai.com; HttpOnly;
-        Secure; SameSite=None
+      - __cf_bm=a7CYAzbs4uuFYWCAK4g8o8noSxY8SNunLrsMfrzpXNA-1743921162-1.0.1.1-AgTkrWj.4i2dDH8C.ngpDiu80YidnfuFJ5O_sl.Fh4zDLERPz0HBrjhwKGXEB6XFZmKlj0MmFNOQrHB7pij6LwTdbYQJ_eM9lp7cc5kmTOU;
+        path=/; expires=Sun, 06-Apr-25 07:02:42 GMT; domain=.api.openai.com; HttpOnly;
+        Secure; SameSite=None, _cfuvid=XBwh4kk.PnKz5mo7.vGNCpRSAB2MvTm_bXdVTHSROWU-1743921162814-0.0.1.1-604800000;
+        path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None
       Llm-Provider-X-Content-Type-Options:
       - nosniff
       Llm-Provider-Server:
       - cloudflare
       Llm-Provider-Cf-Ray:
-      - 92a80609e953c951-MCT
+      - 92bf3fda7e97f9cd-MCT
       Llm-Provider-Content-Encoding:
       - gzip
       Llm-Provider-Alt-Svc:
@@ -112,7 +113,7 @@ http_interactions:
       - '0'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-BICUX0RPAzo81XlLgKT2Jwuijkh1X","created":1743677621,"model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":null,"choices":[{"finish_reason":"stop","index":0,"message":{"content":"2
+      string: '{"id":"chatcmpl-BJDqcIL5W8QB1ACkd6X3Hklp1YYbQ","created":1743921162,"model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":null,"choices":[{"finish_reason":"stop","index":0,"message":{"content":"2
         + 2 equals 4.","role":"assistant","tool_calls":null,"function_call":null,"refusal":null,"annotations":[]}}],"usage":{"completion_tokens":9,"prompt_tokens":15,"total_tokens":24,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0}},"service_tier":"default"}'
-  recorded_at: Thu, 03 Apr 2025 10:53:42 GMT
+  recorded_at: Sun, 06 Apr 2025 06:32:42 GMT
 recorded_with: VCR 6.3.1

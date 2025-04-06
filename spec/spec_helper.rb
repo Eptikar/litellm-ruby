@@ -78,7 +78,7 @@ RSpec.configure do |config|
 end
 
 RSpec.shared_context "with configured LiteLLM" do
-  DEFAULT_MODELS = ["gpt-3.5-turbo", "dall-e-2", "text-embedding-3"].freeze
+  DEFAULT_MODELS = ["gpt-3.5-turbo", "dall-e-2", "text-embedding-3-small"].freeze
 
   before do
     LiteLLM.configure do |config|

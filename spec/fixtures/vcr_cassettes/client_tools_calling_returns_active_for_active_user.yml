@@ -14,7 +14,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.12.2
       X-Request-Id:
-      - 571fc29b-8a63-49ab-8603-c01b4f8e3cbc
+      - c91d983c-125f-44cf-badb-7eb15c253366
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -27,7 +27,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 05 Apr 2025 12:46:45 GMT
+      - Sun, 06 Apr 2025 06:32:44 GMT
       Server:
       - uvicorn
       Content-Length:
@@ -35,7 +35,7 @@ http_interactions:
       Content-Type:
       - application/json
       X-Litellm-Call-Id:
-      - 0d8ac3ce-11a3-4965-97ae-f40daef942ee
+      - 9bba9390-ba2d-4f66-8a83-8f8fa69b26ca
       X-Litellm-Model-Id:
       - a894f5c6235fa10c0c1755367a3bb2ad54a34654ed3da22bee9da260609709f7
       X-Litellm-Model-Api-Base:
@@ -47,9 +47,9 @@ http_interactions:
       X-Litellm-Key-Spend:
       - '0.0'
       X-Litellm-Response-Duration-Ms:
-      - '956.271'
+      - '669.2510000000001'
       X-Litellm-Overhead-Duration-Ms:
-      - '3.159'
+      - '3.673'
       X-Ratelimit-Limit-Requests:
       - '5000'
       X-Ratelimit-Remaining-Requests:
@@ -59,7 +59,7 @@ http_interactions:
       X-Ratelimit-Remaining-Tokens:
       - '1999989'
       Llm-Provider-Date:
-      - Sat, 05 Apr 2025 12:46:47 GMT
+      - Sun, 06 Apr 2025 06:32:45 GMT
       Llm-Provider-Content-Type:
       - application/json
       Llm-Provider-Transfer-Encoding:
@@ -71,7 +71,7 @@ http_interactions:
       Llm-Provider-Openai-Organization:
       - user-s7l904mmsyaeoqfhuynmxjmp
       Llm-Provider-Openai-Processing-Ms:
-      - '325'
+      - '316'
       Llm-Provider-Openai-Version:
       - '2020-10-01'
       Llm-Provider-X-Ratelimit-Limit-Requests:
@@ -87,7 +87,7 @@ http_interactions:
       Llm-Provider-X-Ratelimit-Reset-Tokens:
       - 0s
       Llm-Provider-X-Request-Id:
-      - req_88c7870321a493e8f850a758544b8b6b
+      - req_4f7c68f8685dc3e886ad41e8b287cdfc
       Llm-Provider-Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Llm-Provider-Cf-Cache-Status:
@@ -97,7 +97,7 @@ http_interactions:
       Llm-Provider-Server:
       - cloudflare
       Llm-Provider-Cf-Ray:
-      - 92b92678ff6af9fb-MCT
+      - 92bf3ff2e984f9cd-MCT
       Llm-Provider-Content-Encoding:
       - gzip
       Llm-Provider-Alt-Svc:
@@ -110,14 +110,14 @@ http_interactions:
       - '0'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-BIxD5bm85M8Gc5AZnn5v9Avcty2yN","created":1743857207,"model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":null,"choices":[{"finish_reason":"tool_calls","index":0,"message":{"content":null,"role":"assistant","tool_calls":[{"function":{"arguments":"{\"user_id\":\"user_123\"}","name":"UserStatus__get_user_status"},"id":"call_66DElsWcWdCY6kVu357FCkQJ","type":"function"}],"function_call":null,"refusal":null,"annotations":[]}}],"usage":{"completion_tokens":22,"prompt_tokens":74,"total_tokens":96,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0}},"service_tier":"default"}'
-  recorded_at: Sat, 05 Apr 2025 12:46:47 GMT
+      string: '{"id":"chatcmpl-BJDqfkuo19St0RsduCCwUoYUNIm3F","created":1743921165,"model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":null,"choices":[{"finish_reason":"tool_calls","index":0,"message":{"content":null,"role":"assistant","tool_calls":[{"function":{"arguments":"{\"user_id\":\"user_123\"}","name":"UserStatus__get_user_status"},"id":"call_3kh1HJ1v58U1eYEqqnlu5Q9o","type":"function"}],"function_call":null,"refusal":null,"annotations":[]}}],"usage":{"completion_tokens":22,"prompt_tokens":74,"total_tokens":96,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0}},"service_tier":"default"}'
+  recorded_at: Sun, 06 Apr 2025 06:32:45 GMT
 - request:
     method: post
     uri: http://localhost:8000/chat/completions
     body:
       encoding: UTF-8
-      string: '{"messages":[{"role":"user","content":"What is the status of user_123?"},{"content":null,"role":"assistant","tool_calls":[{"function":{"arguments":"{\"user_id\":\"user_123\"}","name":"UserStatus__get_user_status"},"id":"call_66DElsWcWdCY6kVu357FCkQJ","type":"function"}],"function_call":null,"refusal":null,"annotations":[]},{"role":"tool","tool_call_id":"call_66DElsWcWdCY6kVu357FCkQJ","name":"UserStatus__get_user_status","content":"active"}],"model":"gpt-3.5-turbo","stream":false,"tools":[{"type":"function","function":{"name":"UserStatus__get_user_status","description":"Gets
+      string: '{"messages":[{"role":"user","content":"What is the status of user_123?"},{"content":null,"role":"assistant","tool_calls":[{"function":{"arguments":"{\"user_id\":\"user_123\"}","name":"UserStatus__get_user_status"},"id":"call_3kh1HJ1v58U1eYEqqnlu5Q9o","type":"function"}],"function_call":null,"refusal":null,"annotations":[]},{"role":"tool","tool_call_id":"call_3kh1HJ1v58U1eYEqqnlu5Q9o","name":"UserStatus__get_user_status","content":"active"}],"model":"gpt-3.5-turbo","stream":false,"tools":[{"type":"function","function":{"name":"UserStatus__get_user_status","description":"Gets
         the current status of a user based on their ID","parameters":{"type":"object","properties":{"user_id":{"type":"string","description":"The
         ID of the user to check"}},"required":[],"additionalProperties":false}}}]}'
     headers:
@@ -126,7 +126,7 @@ http_interactions:
       User-Agent:
       - Faraday v2.12.2
       X-Request-Id:
-      - 1baeff13-92ae-47e9-9611-ebe2b02c07b9
+      - b1345654-c060-42a0-a125-ee0e96d16da9
       Content-Type:
       - application/json
       Accept-Encoding:
@@ -139,7 +139,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Sat, 05 Apr 2025 12:46:46 GMT
+      - Sun, 06 Apr 2025 06:32:45 GMT
       Server:
       - uvicorn
       Content-Length:
@@ -147,7 +147,7 @@ http_interactions:
       Content-Type:
       - application/json
       X-Litellm-Call-Id:
-      - 33a0b87f-4b7a-4837-ab69-5d512c8d38f5
+      - dc236324-2ae0-4605-ada6-2fe7dee39d57
       X-Litellm-Model-Id:
       - a894f5c6235fa10c0c1755367a3bb2ad54a34654ed3da22bee9da260609709f7
       X-Litellm-Model-Api-Base:
@@ -159,9 +159,9 @@ http_interactions:
       X-Litellm-Key-Spend:
       - '0.0'
       X-Litellm-Response-Duration-Ms:
-      - '691.2199999999999'
+      - '590.144'
       X-Litellm-Overhead-Duration-Ms:
-      - '3.815'
+      - '2.487'
       X-Ratelimit-Limit-Requests:
       - '5000'
       X-Ratelimit-Remaining-Requests:
@@ -171,7 +171,7 @@ http_interactions:
       X-Ratelimit-Remaining-Tokens:
       - '1999986'
       Llm-Provider-Date:
-      - Sat, 05 Apr 2025 12:46:48 GMT
+      - Sun, 06 Apr 2025 06:32:46 GMT
       Llm-Provider-Content-Type:
       - application/json
       Llm-Provider-Transfer-Encoding:
@@ -183,7 +183,7 @@ http_interactions:
       Llm-Provider-Openai-Organization:
       - user-s7l904mmsyaeoqfhuynmxjmp
       Llm-Provider-Openai-Processing-Ms:
-      - '242'
+      - '253'
       Llm-Provider-Openai-Version:
       - '2020-10-01'
       Llm-Provider-X-Ratelimit-Limit-Requests:
@@ -199,7 +199,7 @@ http_interactions:
       Llm-Provider-X-Ratelimit-Reset-Tokens:
       - 0s
       Llm-Provider-X-Request-Id:
-      - req_716a4a031c32f8287a1b6aa05113439c
+      - req_99ef34f4ecc2a010fdf9d12c9a75a5d3
       Llm-Provider-Strict-Transport-Security:
       - max-age=31536000; includeSubDomains; preload
       Llm-Provider-Cf-Cache-Status:
@@ -209,7 +209,7 @@ http_interactions:
       Llm-Provider-Server:
       - cloudflare
       Llm-Provider-Cf-Ray:
-      - 92b9267dbfd5f9fb-MCT
+      - 92bf3ff73826f9cd-MCT
       Llm-Provider-Content-Encoding:
       - gzip
       Llm-Provider-Alt-Svc:
@@ -222,7 +222,7 @@ http_interactions:
       - '0'
     body:
       encoding: UTF-8
-      string: '{"id":"chatcmpl-BIxD6hLRTUwOqyaGEW3c31AQRQRIO","created":1743857208,"model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":null,"choices":[{"finish_reason":"stop","index":0,"message":{"content":"The
+      string: '{"id":"chatcmpl-BJDqgbKhEouKOkokxfoSl1QRBQftL","created":1743921166,"model":"gpt-3.5-turbo-0125","object":"chat.completion","system_fingerprint":null,"choices":[{"finish_reason":"stop","index":0,"message":{"content":"The
         status of user_123 is active.","role":"assistant","tool_calls":null,"function_call":null,"refusal":null,"annotations":[]}}],"usage":{"completion_tokens":11,"prompt_tokens":108,"total_tokens":119,"completion_tokens_details":{"accepted_prediction_tokens":0,"audio_tokens":0,"reasoning_tokens":0,"rejected_prediction_tokens":0},"prompt_tokens_details":{"audio_tokens":0,"cached_tokens":0}},"service_tier":"default"}'
-  recorded_at: Sat, 05 Apr 2025 12:46:48 GMT
+  recorded_at: Sun, 06 Apr 2025 06:32:46 GMT
 recorded_with: VCR 6.3.1
