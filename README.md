@@ -1,5 +1,7 @@
 # LiteLLM Ruby Client
 
+<a href="https://badge.fury.io/rb/litellm"><img src="https://badge.fury.io/rb/litellm.svg" alt="Gem Version" height="18"></a>
+
 A Ruby client for [LiteLLM](https://docs.litellm.ai/docs) with support for completions, embeddings, and image generation.
 
 ## Installation
