@@ -4,6 +4,7 @@ require "faraday"
 require "event_stream_parser"
 require "json"
 require "logger"
+require "securerandom"
 
 require_relative "litellm/version"
 require_relative "litellm/configuration"

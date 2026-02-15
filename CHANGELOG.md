@@ -1,3 +1,10 @@
+## 1.0.0 (2026-02-15)
+
+- **Security fixes:**
+  - Fixed gemspec metadata overwrite that prevented MFA requirement from being set
+  - Added explicit securerandom require for UUID generation
+- First official stable release
+
 ## 1.0.0.rc3 (2025-04-06)
 
 - Added rspec test suite with vcr, covering current functionality:
